@@ -1,0 +1,32 @@
+Package: mpae
+Type: Package
+Title: Metodos predictivos de aprendizaje estadistico 
+    (statistical learning predictive methods)
+Version: 0.1.0
+Date: 2024-02-01
+Authors@R: c(person("Ruben", "Fernandez-Casal", email = "rubenfcasal@gmail.com", 
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0002-5785-3739")),
+    person("Manuel", "Oviedo de la Fuente", role = c("aut"),
+    email = "manuel.oviedo@udc.es", comment = c(ORCID = "0000-0001-7360-3249")),
+    person("Julian", "Costa-Bouzas", role = c("aut"),
+    email = "julian.costa.bouzas@udc.es", comment = c(ORCID = "0000-0001-9760-9581"))
+    )
+Maintainer: Ruben Fernandez-Casal <rubenfcasal@gmail.com>
+Depends:
+    R (>= 3.5.0),
+    graphics
+Imports:
+    caret    
+Suggests:
+    simres,
+    MASS,
+    boot
+Description: Functions and datasets used in the book: 'Metodos predictivos de 
+    aprendizaje estadistico' <https://rubenfcasal.github.io/aprendizaje_estadistico/>.
+License: GPL (>= 2)
+URL: https://github.com/rubenfcasal/mpae
+BugReports: https://github.com/rubenfcasal/mpae/issues
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

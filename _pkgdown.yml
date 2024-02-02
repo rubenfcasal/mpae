@@ -1,0 +1,52 @@
+url: https://rubenfcasal.github.io/mpae
+
+template:
+  params:
+    bootswatch: cerulean
+
+authors:
+  Ruben Fernandez-Casal:
+    href: https://rubenfcasal.github.io
+
+news:
+  cran_dates: false
+
+# reference:
+#   - title: "Simulation and resampling tools"
+#     desc: "Main utilities and random generation."
+#     contents:
+#       - mpae-package
+#       - .rng
+#       - set.rng
+#       - rng
+#       - rlcg
+#       - rvng
+#       - mc.integral
+#       - rpmf
+#       - rpmf.table
+#       - rpmf.alias
+#   - title: "Simulation results"
+#     desc: "Diagnosis of simulation results, including plots and goodness-of-fit test."
+#     contents:
+#       - mc.plot
+#       - conv.plot
+#       - chisq.cont.test
+#       - freq.test
+#       - rephtest
+#       - plot.rhtest
+#       - summary.rhtest
+#   - title: "Data sets"
+#     desc: "Data sets included in the package."
+#     contents:
+#       - lifetimes
+#   - title: "Examples"
+#     desc: "Examples used in the books."
+#     contents:
+#       - ddexp
+#       - rcauchy.rou
+#   - title: "Utilities"
+#     desc: "Other utilities..."
+#     contents:
+#       - cpu.time
+#       - cdf.plot
+#
