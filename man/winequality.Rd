@@ -2,7 +2,7 @@
 % Please edit documentation in R/mpae_package.R
 \name{winequality}
 \alias{winequality}
-\title{Wine Quality}
+\title{Wine quality data}
 \format{
 A data frame with 1,250 rows and 12 columns:
 \describe{
@@ -44,6 +44,6 @@ Modeling wine preferences by data mining from physicochemical properties.
 \emph{Decision Support Systems}, 47(4), 547-553.
 }
 \seealso{
-\code{\link[=winetaste]{winetaste()}}
+\code{\link{winetaste}}
 }
 \keyword{datasets}

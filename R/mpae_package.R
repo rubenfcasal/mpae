@@ -36,14 +36,236 @@
 #' Fernández-Casal R., Cao R., Costa J. (2023).
 #' *[Técnicas de Simulación y Remuestreo](https://rubenfcasal.github.io/simbook)*,
 #' segunda edición, ([github](https://github.com/rubenfcasal/simbook)).
+NULL # mpae-package
+
+
+#····································································
+# bodyfat.raw ----
+#····································································
+#' Original body fat data
 #'
-NULL
+#' Popular dataset originally analysed in Penrose et al. (1985).
+#' Lists estimates of the percentage of body fat determined by underwater weighing
+#' and various body measurements for 252 men.
+#'
+#' This data set can be used to illustrate data cleaning and multiple regression
+#' techniques (e.g. Johnson 1996).
+#' Percentage of body fat for an individual can be estimated from body density,
+#' for instance by using Siri's (1956) equation:
+#' \deqn{bodyfat = 495/density - 450}.
+#' Volume, and hence body density, can be accurately measured by underwater
+#' weighing (e.g. Katch and McArdle, 1977).
+#' However, this procedure for the accurate measurement of body fat is
+#' inconvenient and costly.
+#' It is desirable to have easy methods of estimating body fat from body
+#' measurements.
+#'
+#' Johnson (1996) uses the original data in an activity to introduce students
+#' to data cleaning before performing multiple linear regression.
+#' An examination of the data reveals some unusual cases:
+#'
+#' * Cases 48, 76, and 96 seem to have a one-digit error in the listed density values.
+#'
+#' * Case 42 appears to have a one-digit error in the height value.
+#'
+#' * Case 182 appears to have an error in the density value (as it is greater
+#' than 1.1, the density of the "fat free mass"; resulting in a negative estimate
+#' of body fat percentage that was truncated to zero).
+#'
+#' Johnson (1996) suggests some rules for correcting these values
+#' (see examples below).
+#'
+#' @name bodyfat.raw
+#' @format
+#' A data frame with 252 rows and 15 columns:
+#' \describe{
+#'   \item{density}{Density (gm/cm^3; determined from underwater weighing)}
+#'   \item{bodyfat}{Percent body fat (from Siri's 1956 equation)}
+#'   \item{age}{Age (years)}
+#'   \item{weight}{Weight (lbs)}
+#'   \item{height}{Height (inches)}
+#'   \item{neck}{Neck circumference (cm)}
+#'   \item{chest}{Chest circumference (cm)}
+#'   \item{abdomen}{Abdomen 2 circumference (cm)}
+#'   \item{hip}{Hip circumference (cm)}
+#'   \item{thigh}{Thigh circumference (cm)}
+#'   \item{knee}{Knee circumference (cm)}
+#'   \item{ankle}{Ankle circumference (cm)}
+#'   \item{biceps}{Biceps (extended) circumference (cm)}
+#'   \item{forearm}{Forearm circumference (cm)}
+#'   \item{wrist}{Wrist circumference (cm)}
+#' }
+#' @source
+#' StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+#' @references
+#' Johnson, R. W. (1996). Fitting Percentage of Body Fat to Simple Body
+#' Measurements. *Journal of Statistics Education*, 4(1).
+#' \url{https://doi.org/10.1080/10691898.1996.11910505}.
+#'
+#' Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
+#' Prediction Equation for Men Using Simple Measurement Techniques.
+#' *Medicine and Science in Sports and Exercise*, 17(2), 189.
+#' \url{https://doi.org/10.1249/00005768-198504000-00037}.
+#'
+#' Siri, W. E. (1956). Gross Composition of the Body, in *Advances in Biological
+#' and Medical Physics* (Vol. IV), eds. J. H. Lawrence and C. A. Tobias,
+#' Academic Press.
+#' @keywords datasets
+#' @seealso [`bodyfat`], [`bfan`]
+#' @examples
+#' bodyfat <- bodyfat.raw
+#' # Johnson's (1996) corrections
+#' cases <- c(48, 76, 96) # bodyfat != 495/density - 450
+#' bodyfat$density[cases] <- 495 / (bodyfat$bodyfat[cases] + 450)
+#' bodyfat$height[42] <- 69.5
+#' # Other possible data entry errors
+#' # See https://stat-ata-asu.github.io/PredictiveModelBuilding/BFdata.html
+#' bodyfat$ankle[31] <- 23.9
+#' bodyfat$ankle[86] <- 23.7
+#' bodyfat$forearm[159] <- 24.9
+#' # Outlier and influential observation
+#' outliers <- c(182, 39)
+#' bodyfat[outliers, ]
+#' bodyfat <- bodyfat[-outliers, ]
+#'
+#' # Body mass index (kg/m2)
+#' bodyfat$bmi <- with(bodyfat, weight/(height*0.0254)^2)
+#' # Alternate body mass index
+#' bodyfat$bmi2 <- with(bodyfat, (weight*0.45359237)^1.2/(height*0.0254)^3.3)
+#' # See e.g. https://en.wikipedia.org/wiki/Body_fat_percentage#From_BMI
+#' # \text{(Adult) body fat percentage} = (1.39 \times \text{BMI})
+#' #               + (0.16 \times \text{age}) - (10.34 \times \text{gender}) - 9
+"bodyfat.raw"
+
+
+#····································································
+# bodyfat ----
+#····································································
+#' Body fat data
+#'
+#' Modification of the dataset analysed in Penrose et al. (1985).
+#' Lists estimates of the percentage of body fat determined by underwater weighing
+#' and various body measurements for 246 men.
+#'
+#' This data set can be used to illustrate multiple regression techniques
+#' (e.g. Johnson 1996).
+#' Instead of estimating body fat percentage from body density, which is not
+#' easy to measure, it is desirable to have a simpler method that allow this to
+#' be done from body measurements.
+#'
+#' [`bodyfat.raw`] contains the original data.
+#' According to Johnson (1996), there were data entry errors (cases 42, 48, 76,
+#' 96 and 182 of the original data) and he suggested some rules to correct them.
+#' These outliers were removed in the `bodyfat` dataset, as well as an influential
+#' observation (case 39, which has a big effect on regression estimates).
+#' Additionally, the variable `density` was dropped for convenience, and variables
+#' `height` and `weight` were transformed into metric units (centimetres and
+#' kilograms) for consistency.
+#'
+#' See [`bodyfat.raw`] for more details.
+#'
+#' @name bodyfat
+#' @format
+#' A data frame with 246 rows and 14 columns:
+#' \describe{
+#'   \item{bodyfat}{Percent body fat (from Siri's 1956 equation)}
+#'   \item{age}{Age (years)}
+#'   \item{weight}{Weight (kg)}
+#'   \item{height}{Height (cm)}
+#'   \item{neck}{Neck circumference (cm)}
+#'   \item{chest}{Chest circumference (cm)}
+#'   \item{abdomen}{Abdomen 2 circumference (cm)}
+#'   \item{hip}{Hip circumference (cm)}
+#'   \item{thigh}{Thigh circumference (cm)}
+#'   \item{knee}{Knee circumference (cm)}
+#'   \item{ankle}{Ankle circumference (cm)}
+#'   \item{biceps}{Biceps (extended) circumference (cm)}
+#'   \item{forearm}{Forearm circumference (cm)}
+#'   \item{wrist}{Wrist circumference (cm)}
+#' }
+#' @source
+#' StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+#' @references
+#' Johnson, R. W. (1996). Fitting Percentage of Body Fat to Simple Body
+#' Measurements. *Journal of Statistics Education*, 4(1).
+#' \url{https://doi.org/10.1080/10691898.1996.11910505}.
+#'
+#' Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
+#' Prediction Equation for Men Using Simple Measurement Techniques.
+#' *Medicine and Science in Sports and Exercise*, 17(2), 189.
+#' \url{https://doi.org/10.1249/00005768-198504000-00037}.
+#' @keywords datasets
+#' @seealso [`bodyfat.raw`], [`bfan`]
+#' @examples
+#' fit <- lm(bodyfat ~ abdomen, bodyfat)
+#' summary(fit)
+#' plot(bodyfat ~ abdomen, bodyfat)
+#' abline(fit)
+NULL # "bodyfat"
+
+
+#····································································
+# bfan ----
+#····································································
+#' Above normal body fat data
+#'
+#' Modification of the [`bodyfat`] dataset for classification.
+#' The response `bfan` is a factor indicating a body fat value above the normal
+#' range.
+#' The variable `bodyfat` was dropped for convenience, and two new variables
+#' `bmi` (body mass index, in kg/m^2) and `bmi2` (alternate body mass index,
+#' in kg^1.2/m^3.3) were computed (see examples below).
+#'
+#' See [`bodyfat`] and [`bodyfat.raw`] for details.
+#'
+#' @name bfan
+#' @format
+#' A data frame with 246 rows and 16 columns:
+#' \describe{
+#'   \item{bfan}{Body fat above normal range}
+#'   \item{age}{Age (years)}
+#'   \item{weight}{Weight (kg)}
+#'   \item{height}{Height (cm)}
+#'   \item{neck}{Neck circumference (cm)}
+#'   \item{chest}{Chest circumference (cm)}
+#'   \item{abdomen}{Abdomen 2 circumference (cm)}
+#'   \item{hip}{Hip circumference (cm)}
+#'   \item{thigh}{Thigh circumference (cm)}
+#'   \item{knee}{Knee circumference (cm)}
+#'   \item{ankle}{Ankle circumference (cm)}
+#'   \item{biceps}{Biceps (extended) circumference (cm)}
+#'   \item{forearm}{Forearm circumference (cm)}
+#'   \item{wrist}{Wrist circumference (cm)}
+#'   \item{bmi}{Body mass index (kg/m2)}
+#'   \item{bmi2}{Alternate body mass index}
+#' }
+#' @source
+#' StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+#' @references
+#' Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
+#' Prediction Equation for Men Using Simple Measurement Techniques.
+#' *Medicine and Science in Sports and Exercise*, 17(2), 189.
+#' \url{https://doi.org/10.1249/00005768-198504000-00037}.
+#' @keywords datasets
+#' @seealso [`bodyfat`], [`bodyfat.raw`]
+#' @examples
+#' bfan <- bodyfat
+#' # Body fat above normal
+#' bfan[1] <- factor(bfan$bodyfat > 24 , # levels = c('FALSE', 'TRUE'),
+#'                 labels = c('No', 'Yes'))
+#' names(bfan)[1] <- "bfan"
+#' bfan$bmi <- with(bfan, weight/(height/100)^2)
+#' bfan$bmi2 <- with(bfan, weight^1.2/(height/100)^3.3)
+#'
+#' fit <- glm(bfan ~ abdomen, family = binomial, data = bfan)
+#' summary(fit)
+NULL # "bfan"
 
 
 #····································································
 # winequality ----
 #····································································
-#' Wine Quality
+#' Wine quality data
 #'
 #' A subset related to the white variant of the Portuguese "Vinho Verde" wine,
 #' containing physicochemical information (`fixed.acidity`, `volatile.acidity`,
@@ -78,17 +300,17 @@ NULL
 #' Modeling wine preferences by data mining from physicochemical properties.
 #' *Decision Support Systems*, 47(4), 547-553.
 #' @keywords datasets
-#' @seealso [winetaste()]
+#' @seealso [`winetaste`]
 #' @examples
 #' str(winequality)
-NULL
+NULL # "winequality"
 
 
 
 #····································································
 # winetaste ----
 #····································································
-#' Wine Taste
+#' Wine taste data
 #'
 #' A subset related to the white variant of the Portuguese "Vinho Verde" wine,
 #' containing physicochemical information (`fixed.acidity`, `volatile.acidity`,
@@ -126,13 +348,13 @@ NULL
 #' Modeling wine preferences by data mining from physicochemical properties.
 #' *Decision Support Systems*, 47(4), 547-553.
 #' @keywords datasets
-#' @seealso [winequality()]
+#' @seealso [`winequality`]
 #' @examples
 #' winetaste <- winequality[, names(winequality)!="quality"]
 #' winetaste$taste <- factor(winequality$quality < 6,
 #'                       labels = c('good', 'bad')) # levels = c('FALSE', 'TRUE')
 #' str(winetaste)
-NULL
+NULL # "winetaste"
 
 
 
@@ -219,7 +441,7 @@ NULL
 #' str(hbat)
 #' as.data.frame(attr(hbat, "variable.labels"))
 #' summary(hbat)
-NULL
+NULL # "hbat"
 
 
 #····································································
@@ -229,7 +451,8 @@ NULL
   pkg.info <- drop( read.dcf( file = system.file("DESCRIPTION", package = "mpae"),
                               fields = c("Title", "Version", "Date") ))
   packageStartupMessage(
-    paste0(" mpae: ", pkg.info["Title"], ",\n"),
+    " mpae: Metodos predictivos de aprendizaje estadistico\n",
+    " (statistical learning predictive methods),\n",
     paste0(" version ", pkg.info["Version"], " (built on ", pkg.info["Date"], ").\n"),
     " Type `help(mpae)` for an overview of the package or\n",
     " visit https://rubenfcasal.github.io/mpae.\n")
