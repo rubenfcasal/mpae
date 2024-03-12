@@ -34,5 +34,5 @@ Fernández-Casal R., Costa J. y Oviedo M. (2024). *[Métodos predictivos de apre
 
 Fernández-Casal R., Roca-Pardiñas J., Costa J. y Oviedo-de la Fuente M. (2022). *[Introducción al Análisis de Datos con R](https://rubenfcasal.github.io/intror)* ([github](https://github.com/rubenfcasal/intror)).
 
-Fernández-Casal R., Cao R., Costa J. (2023). *[Técnicas de Simulación y Remuestreo](https://rubenfcasal.github.io/simbook)*, segunda edición, ([github](https://github.com/rubenfcasal/simbook)).
+Fernández-Casal R., Cao R. y Costa J. (2023). *[Técnicas de Simulación y Remuestreo](https://rubenfcasal.github.io/simbook)*, segunda edición, ([github](https://github.com/rubenfcasal/simbook)).
 

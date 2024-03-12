@@ -40,13 +40,18 @@ This data set can be used to illustrate data cleaning and multiple regression
 techniques (e.g. Johnson 1996).
 Percentage of body fat for an individual can be estimated from body density,
 for instance by using Siri's (1956) equation:
-\deqn{bodyfat = 495/density - 450}.
+\deqn{bodyfat = 495/density - 450.}
 Volume, and hence body density, can be accurately measured by underwater
 weighing (e.g. Katch and McArdle, 1977).
 However, this procedure for the accurate measurement of body fat is
 inconvenient and costly.
 It is desirable to have easy methods of estimating body fat from body
 measurements.
+
+"Measurement standards are apparently those listed in Benhke and Wilmore
+(1974), pp. 45-48 where, for instance, the abdomen 2 circumference is
+measured 'laterally, at the level of the iliac crests, and anteriorly, at
+the umbilicus'.
 
 Johnson (1996) uses the original data in an activity to introduce students
 to data cleaning before performing multiple linear regression.

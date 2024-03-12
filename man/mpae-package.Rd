@@ -20,7 +20,7 @@ Fernández-Casal R., Roca-Pardiñas J., Costa J. y Oviedo-de la Fuente M. (2022)
 \emph{\href{https://rubenfcasal.github.io/intror}{Introducción al Análisis de Datos con R}}
 (\href{https://github.com/rubenfcasal/intror}{github}).
 
-Fernández-Casal R., Cao R., Costa J. (2023).
+Fernández-Casal R., Cao R. y Costa J. (2023).
 \emph{\href{https://rubenfcasal.github.io/simbook}{Técnicas de Simulación y Remuestreo}},
 segunda edición, (\href{https://github.com/rubenfcasal/simbook}{github}).
 }

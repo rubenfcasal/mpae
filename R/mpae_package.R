@@ -33,7 +33,7 @@
 #' *[Introducción al Análisis de Datos con R](https://rubenfcasal.github.io/intror)*
 #' ([github](https://github.com/rubenfcasal/intror)).
 #'
-#' Fernández-Casal R., Cao R., Costa J. (2023).
+#' Fernández-Casal R., Cao R. y Costa J. (2023).
 #' *[Técnicas de Simulación y Remuestreo](https://rubenfcasal.github.io/simbook)*,
 #' segunda edición, ([github](https://github.com/rubenfcasal/simbook)).
 NULL # mpae-package
@@ -52,13 +52,18 @@ NULL # mpae-package
 #' techniques (e.g. Johnson 1996).
 #' Percentage of body fat for an individual can be estimated from body density,
 #' for instance by using Siri's (1956) equation:
-#' \deqn{bodyfat = 495/density - 450}.
+#' \deqn{bodyfat = 495/density - 450.}
 #' Volume, and hence body density, can be accurately measured by underwater
 #' weighing (e.g. Katch and McArdle, 1977).
 #' However, this procedure for the accurate measurement of body fat is
 #' inconvenient and costly.
 #' It is desirable to have easy methods of estimating body fat from body
 #' measurements.
+#'
+#' "Measurement standards are apparently those listed in Benhke and Wilmore
+#' (1974), pp. 45-48 where, for instance, the abdomen 2 circumference is
+#' measured 'laterally, at the level of the iliac crests, and anteriorly, at
+#' the umbilicus'.
 #'
 #' Johnson (1996) uses the original data in an activity to introduce students
 #' to data cleaning before performing multiple linear regression.
@@ -174,7 +179,7 @@ NULL # mpae-package
 #'   \item{height}{Height (cm)}
 #'   \item{neck}{Neck circumference (cm)}
 #'   \item{chest}{Chest circumference (cm)}
-#'   \item{abdomen}{Abdomen 2 circumference (cm)}
+#'   \item{abdomen}{Abdomen circumference (cm)}
 #'   \item{hip}{Hip circumference (cm)}
 #'   \item{thigh}{Thigh circumference (cm)}
 #'   \item{knee}{Knee circumference (cm)}
@@ -228,7 +233,7 @@ NULL # "bodyfat"
 #'   \item{height}{Height (cm)}
 #'   \item{neck}{Neck circumference (cm)}
 #'   \item{chest}{Chest circumference (cm)}
-#'   \item{abdomen}{Abdomen 2 circumference (cm)}
+#'   \item{abdomen}{Abdomen circumference (cm)}
 #'   \item{hip}{Hip circumference (cm)}
 #'   \item{thigh}{Thigh circumference (cm)}
 #'   \item{knee}{Knee circumference (cm)}

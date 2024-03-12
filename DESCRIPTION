@@ -2,8 +2,8 @@ Package: mpae
 Type: Package
 Title: Metodos predictivos de aprendizaje estadistico 
     (statistical learning predictive methods)
-Version: 0.1.0
-Date: 2024-02-01
+Version: 0.1.1
+Date: 2024-03-13
 Authors@R: c(person("Ruben", "Fernandez-Casal", email = "rubenfcasal@gmail.com", 
     role = c("aut", "cre"), comment = c(ORCID = "0000-0002-5785-3739")),
     person("Manuel", "Oviedo de la Fuente", role = c("aut"),

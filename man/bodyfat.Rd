@@ -12,7 +12,7 @@ A data frame with 246 rows and 14 columns:
 \item{height}{Height (cm)}
 \item{neck}{Neck circumference (cm)}
 \item{chest}{Chest circumference (cm)}
-\item{abdomen}{Abdomen 2 circumference (cm)}
+\item{abdomen}{Abdomen circumference (cm)}
 \item{hip}{Hip circumference (cm)}
 \item{thigh}{Thigh circumference (cm)}
 \item{knee}{Knee circumference (cm)}
