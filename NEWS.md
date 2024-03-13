@@ -1,6 +1,5 @@
 # mpae (development version)
 
-
 * Added `()`.
 
 * Fixed small bug in `()`
@@ -13,6 +12,14 @@
 
 * Added body fat datasets: `bodyfat.raw`, `bodyfat` and `bfan`.
 
+* Added `pred.plot()` S3 generic function (and methods).
+
+  - `obs.pred.plot()` renamed as `pred.plot.default()` (default method).
+
+
+* S3 generic `beta.coef()` renamed as `scaled.coef()`, 
+  with an additional argument `scaled.response = TRUE`
+  in the default method.
 
 
 # mpae 0.1-0 (2024-02-01) 
