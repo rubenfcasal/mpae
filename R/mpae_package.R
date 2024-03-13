@@ -206,7 +206,7 @@ NULL # mpae-package
 #' summary(fit)
 #' plot(bodyfat ~ abdomen, bodyfat)
 #' abline(fit)
-NULL # "bodyfat"
+"bodyfat"
 
 
 #····································································
@@ -264,7 +264,7 @@ NULL # "bodyfat"
 #'
 #' fit <- glm(bfan ~ abdomen, family = binomial, data = bfan)
 #' summary(fit)
-NULL # "bfan"
+"bfan"
 
 
 #····································································
@@ -308,7 +308,7 @@ NULL # "bfan"
 #' @seealso [`winetaste`]
 #' @examples
 #' str(winequality)
-NULL # "winequality"
+"winequality"
 
 
 
@@ -359,7 +359,7 @@ NULL # "winequality"
 #' winetaste$taste <- factor(winequality$quality < 6,
 #'                       labels = c('good', 'bad')) # levels = c('FALSE', 'TRUE')
 #' str(winetaste)
-NULL # "winetaste"
+"winetaste"
 
 
 
@@ -446,7 +446,7 @@ NULL # "winetaste"
 #' str(hbat)
 #' as.data.frame(attr(hbat, "variable.labels"))
 #' summary(hbat)
-NULL # "hbat"
+"hbat"
 
 
 #····································································
