@@ -28,7 +28,7 @@
 #' @importFrom RcmdrMisc Barplot
 # @importFrom grDevices dev.interactive devAskNewPage dev.flush dev.hold
 #' @references
-#' Fernández-Casal R., Costa J. y Oviedo M. (2024). *[Métodos predictivos de aprendizaje estadístico](https://rubenfcasal.github.io/aprendizaje_estadistico/)*
+#' Fernández-Casal R., Costa J. y Oviedo-de la Fuente M. (2024). *[Métodos predictivos de aprendizaje estadístico](https://rubenfcasal.github.io/aprendizaje_estadistico/)*
 #' ([github](https://github.com/rubenfcasal/aprendizaje_estadistico/)).
 #'
 #' Fernández-Casal R., Roca-Pardiñas J., Costa J. y Oviedo-de la Fuente M. (2022).

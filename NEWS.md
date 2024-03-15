@@ -8,6 +8,7 @@
 * Small changes in `()`
   ().
 
+
 # mpae 0.1-1 (2024-03-15) 
 
 * Added body fat datasets: `bodyfat.raw`, `bodyfat` and `bfan`.
@@ -24,6 +25,9 @@
   in the default method.
 
 * Added packages used in the book in the `Suggests` field of DESCRIPTION.
+
+* Added URL trailing slashes in README.md
+  (CRAN requirement).
 
 
 # mpae 0.1-0 (2024-02-01) 

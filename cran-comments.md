@@ -1,4 +1,7 @@
-The package has been uploaded successfully to CRAN submission team.
+## Resubmission 
+
+Added trailing slashes to URLs in README.md.
+
 
 ## New submission
 
@@ -9,7 +12,7 @@ This produces the following notes when checking:
 
 The `hatco` dataset is also in Spanish.
 Checking data for non-ASCII characters:
-- Note: found 19 marked Latin-1 strings
+- Found 19 marked Latin-1 strings
 
 These notes should be ignored.
 
@@ -23,4 +26,4 @@ Rubén
 
 By using `rhub::check_for_cran()`:
 
-0 errors | 0 warnings | 3 notes
+0 errors | 0 warnings | 1 notes

@@ -13,7 +13,7 @@ Functions and datasets used in the book \href{https://rubenfcasal.github.io/apre
 For more information visit \url{https://rubenfcasal.github.io/mpae/}.
 }
 \references{
-Fernández-Casal R., Costa J. y Oviedo M. (2024). \emph{\href{https://rubenfcasal.github.io/aprendizaje_estadistico/}{Métodos predictivos de aprendizaje estadístico}}
+Fernández-Casal R., Costa J. y Oviedo-de la Fuente M. (2024). \emph{\href{https://rubenfcasal.github.io/aprendizaje_estadistico/}{Métodos predictivos de aprendizaje estadístico}}
 (\href{https://github.com/rubenfcasal/aprendizaje_estadistico/}{github}).
 
 Fernández-Casal R., Roca-Pardiñas J., Costa J. y Oviedo-de la Fuente M. (2022).
