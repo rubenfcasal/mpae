@@ -3,12 +3,15 @@
 <!-- 
 pkgdown::build_site()
 options(keep.source.pkgs = TRUE)
-remotes::install_github("rubenfcasal/mpae", INSTALL_opts = "--with-keep.source") I
+remotes::install_github("rubenfcasal/mpae", INSTALL_opts = "--with-keep.source") 
+{ch <- rhub::check_for_cran(show_status = FALSE)
+ch$update()
+ch$livelog(3)}
 -->
 
 Functions and datasets used in the book [*Métodos predictivos de aprendizaje estadístico*](https://rubenfcasal.github.io/aprendizaje_estadistico).
 
-For more information visit <https://rubenfcasal.github.io/mpae.html>.
+For more information visit <https://rubenfcasal.github.io/mpae/>.
 
 ## Installation
 

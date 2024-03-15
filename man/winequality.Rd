@@ -23,7 +23,7 @@ by experts, who evaluated them between 0 (very bad) and 10 (very excellent)}
 }
 }
 \source{
-UCI Machine Learning Repository: \url{http://archive.ics.uci.edu/dataset/186/wine+quality}.
+UCI Machine Learning Repository: \url{https://archive.ics.uci.edu/dataset/186/wine+quality}.
 }
 \usage{
 winequality
@@ -36,7 +36,7 @@ containing physicochemical information (\code{fixed.acidity}, \code{volatile.aci
 and sensory (\code{quality}).
 }
 \details{
-For more details, consult \url{http://www.vinhoverde.pt/en/} or the reference
+For more details, consult \url{https://www.vinhoverde.pt/en/} or the reference
 Cortez et al. (2009).
 }
 \examples{

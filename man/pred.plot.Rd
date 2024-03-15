@@ -3,7 +3,8 @@
 \name{pred.plot}
 \alias{pred.plot}
 \alias{pred.plot.default}
-\title{Observed vs. predicted plot}
+\alias{pred.plot.factor}
+\title{Observed vs. predicted plots}
 \usage{
 pred.plot(pred, obs, ...)
 
@@ -16,32 +17,62 @@ pred.plot(pred, obs, ...)
   lowess = TRUE,
   ...
 )
+
+\method{pred.plot}{factor}(
+  pred,
+  obs,
+  type = c("frec", "perc", "cperc"),
+  xlab = "Observed",
+  ylab = NULL,
+  legend.title = "Predicted",
+  label.bars = TRUE,
+  ...
+)
 }
 \arguments{
 \item{pred}{a numeric vector with the predicted values.}
 
 \item{obs}{a numeric vector with the observed values.}
 
-\item{...}{additional graphical parameters.}
+\item{...}{additional graphical parameters (e.g. to be passed to
+\code{\link[RcmdrMisc:Barplot]{RcmdrMisc::Barplot()}}).}
 
-\item{xlab}{a title for the axis corresponding to the predicted values.}
+\item{xlab}{a title for the x axis.}
 
-\item{ylab}{a title for the axis corresponding to the observed values.}
+\item{ylab}{a title for the y axis.}
 
 \item{lm.fit}{logical indicating if a \code{\link[stats]{lm}} fit is
 added to the plot.}
 
 \item{lowess}{logical indicating if a \code{\link[stats]{lowess}} smooth is
 added to the plot.}
+
+\item{type}{types of the desired plots. Any combination of the following
+values is possible: \code{"frec"} for frequencies, \code{"perc"} for percentages or
+\code{"cperc"} for conditional percentages.}
+
+\item{legend.title}{a title for the legend.}
+
+\item{label.bars}{if \code{TRUE} (the default) show values of frequencies or
+percents in the bars.}
 }
 \value{
-The default method invisibly returns the fitted linear model if \code{lm.fit == TRUE}.
+The default method invisibly returns the fitted linear model if
+\code{lm.fit == TRUE}.
+
+\code{pred.plot.factor()} invisibly returns the horizontal coordinates of the
+centers of the bars.
 }
 \description{
-Generates a plot comparing predictions with observations.
+Generates plots comparing predictions with observations.
 }
 \details{
-The default method draws a scatter plot of the observed values against the predicted values.
+The default method draws a scatter plot of the observed values against the
+predicted values.
+
+\code{pred.plot.factor()} creates bar plots representing frequencies, percentages
+or conditional percentages of \code{pred} within levels of \code{obs}.
+This method is a front end to \code{\link[RcmdrMisc:Barplot]{RcmdrMisc::Barplot()}}.
 }
 \examples{
 set.seed(1)
@@ -49,9 +80,21 @@ nobs <- nrow(hbat)
 itrain <- sample(nobs, 0.8 * nobs)
 train <- hbat[itrain, ]
 test <- hbat[-itrain, ]
-fit <- lm(fidelida ~ velocida + calidadp, train)
+
+# Regression
+fit <- lm(fidelida ~ velocida + calidadp, data = train)
 pred <- predict(fit, newdata = test)
 obs <- test$fidelida
 res <- pred.plot(pred, obs)
 summary(res)
+
+# Classification
+fit2 <- glm(alianza ~ velocida + calidadp, family = binomial, data = train)
+obs <- test$alianza
+p.est <- predict(fit2, type = "response", newdata = test)
+pred <- factor(p.est > 0.5, labels = levels(obs))
+pred.plot(pred, obs, type = "frec", style = "parallel")
+old.par <- par(mfrow = c(1, 2))
+pred.plot(pred, obs, type = c("perc", "cperc"))
+par(old.par)
 }

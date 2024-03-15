@@ -26,7 +26,7 @@ A data frame with 246 rows and 16 columns:
 }
 }
 \source{
-StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+StatLib Datasets Archive: \url{https://lib.stat.cmu.edu/datasets/bodyfat}.
 }
 \usage{
 bfan
@@ -58,7 +58,7 @@ summary(fit)
 Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
 Prediction Equation for Men Using Simple Measurement Techniques.
 \emph{Medicine and Science in Sports and Exercise}, 17(2), 189.
-\url{https://doi.org/10.1249/00005768-198504000-00037}.
+\doi{10.1249/00005768-198504000-00037}.
 }
 \seealso{
 \code{\link{bodyfat}}, \code{\link{bodyfat.raw}}

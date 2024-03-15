@@ -24,7 +24,7 @@ A data frame with 246 rows and 14 columns:
 }
 }
 \source{
-StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+StatLib Datasets Archive: \url{https://lib.stat.cmu.edu/datasets/bodyfat}.
 }
 \usage{
 bodyfat
@@ -61,12 +61,12 @@ abline(fit)
 \references{
 Johnson, R. W. (1996). Fitting Percentage of Body Fat to Simple Body
 Measurements. \emph{Journal of Statistics Education}, 4(1).
-\url{https://doi.org/10.1080/10691898.1996.11910505}.
+\doi{10.1080/10691898.1996.11910505}.
 
 Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
 Prediction Equation for Men Using Simple Measurement Techniques.
 \emph{Medicine and Science in Sports and Exercise}, 17(2), 189.
-\url{https://doi.org/10.1249/00005768-198504000-00037}.
+\doi{10.1249/00005768-198504000-00037}.
 }
 \seealso{
 \code{\link{bodyfat.raw}}, \code{\link{bfan}}

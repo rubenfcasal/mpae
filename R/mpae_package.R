@@ -1,11 +1,12 @@
 #····································································
 #   mpae-package.R
 #····································································
-#   https://github.com/rubenfcasal/mpae
+#   https://github.com/rubenfcasal/mpae/
 #
 #   NOTE: Press Ctrl + Shift + O to show document outline in RStudio
 #····································································
 # pkgdown::build_site()
+# rhub::check_for_cran()
 
 #····································································
 # mpae-package ----
@@ -14,9 +15,9 @@
 #' (statistical learning predictive methods)
 #'
 #' Functions and datasets used in the book [*Métodos predictivos de
-#' aprendizaje estadístico*](https://rubenfcasal.github.io/aprendizaje_estadistico).
+#' aprendizaje estadístico*](https://rubenfcasal.github.io/aprendizaje_estadistico/).
 #'
-#' For more information visit <https://rubenfcasal.github.io/mpae.html>.
+#' For more information visit <https://rubenfcasal.github.io/mpae/>.
 #' @keywords simulation bootstrap Monte-Carlo
 #' @name mpae-package
 #' @aliases mpae
@@ -24,18 +25,19 @@
 #' @import graphics
 #' @import stats
 #' @importFrom caret confusionMatrix
+#' @importFrom RcmdrMisc Barplot
 # @importFrom grDevices dev.interactive devAskNewPage dev.flush dev.hold
 #' @references
-#' Fernández-Casal R., Costa J. y Oviedo M. (2024). *[Métodos predictivos de aprendizaje estadístico](https://rubenfcasal.github.io/aprendizaje_estadistico)*
-#' ([github](https://github.com/rubenfcasal/aprendizaje_estadistico)).
+#' Fernández-Casal R., Costa J. y Oviedo M. (2024). *[Métodos predictivos de aprendizaje estadístico](https://rubenfcasal.github.io/aprendizaje_estadistico/)*
+#' ([github](https://github.com/rubenfcasal/aprendizaje_estadistico/)).
 #'
 #' Fernández-Casal R., Roca-Pardiñas J., Costa J. y Oviedo-de la Fuente M. (2022).
-#' *[Introducción al Análisis de Datos con R](https://rubenfcasal.github.io/intror)*
-#' ([github](https://github.com/rubenfcasal/intror)).
+#' *[Introducción al Análisis de Datos con R](https://rubenfcasal.github.io/intror/)*
+#' ([github](https://github.com/rubenfcasal/intror/)).
 #'
 #' Fernández-Casal R., Cao R. y Costa J. (2023).
-#' *[Técnicas de Simulación y Remuestreo](https://rubenfcasal.github.io/simbook)*,
-#' segunda edición, ([github](https://github.com/rubenfcasal/simbook)).
+#' *[Técnicas de Simulación y Remuestreo](https://rubenfcasal.github.io/simbook/)*,
+#' segunda edición, ([github](https://github.com/rubenfcasal/simbook/)).
 NULL # mpae-package
 
 
@@ -101,16 +103,16 @@ NULL # mpae-package
 #'   \item{wrist}{Wrist circumference (cm)}
 #' }
 #' @source
-#' StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+#' StatLib Datasets Archive: \url{https://lib.stat.cmu.edu/datasets/bodyfat}.
 #' @references
 #' Johnson, R. W. (1996). Fitting Percentage of Body Fat to Simple Body
 #' Measurements. *Journal of Statistics Education*, 4(1).
-#' \url{https://doi.org/10.1080/10691898.1996.11910505}.
+#' \doi{10.1080/10691898.1996.11910505}.
 #'
 #' Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
 #' Prediction Equation for Men Using Simple Measurement Techniques.
 #' *Medicine and Science in Sports and Exercise*, 17(2), 189.
-#' \url{https://doi.org/10.1249/00005768-198504000-00037}.
+#' \doi{10.1249/00005768-198504000-00037}.
 #'
 #' Siri, W. E. (1956). Gross Composition of the Body, in *Advances in Biological
 #' and Medical Physics* (Vol. IV), eds. J. H. Lawrence and C. A. Tobias,
@@ -189,16 +191,16 @@ NULL # mpae-package
 #'   \item{wrist}{Wrist circumference (cm)}
 #' }
 #' @source
-#' StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+#' StatLib Datasets Archive: \url{https://lib.stat.cmu.edu/datasets/bodyfat}.
 #' @references
 #' Johnson, R. W. (1996). Fitting Percentage of Body Fat to Simple Body
 #' Measurements. *Journal of Statistics Education*, 4(1).
-#' \url{https://doi.org/10.1080/10691898.1996.11910505}.
+#' \doi{10.1080/10691898.1996.11910505}.
 #'
 #' Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
 #' Prediction Equation for Men Using Simple Measurement Techniques.
 #' *Medicine and Science in Sports and Exercise*, 17(2), 189.
-#' \url{https://doi.org/10.1249/00005768-198504000-00037}.
+#' \doi{10.1249/00005768-198504000-00037}.
 #' @keywords datasets
 #' @seealso [`bodyfat.raw`], [`bfan`]
 #' @examples
@@ -245,12 +247,12 @@ NULL # mpae-package
 #'   \item{bmi2}{Alternate body mass index}
 #' }
 #' @source
-#' StatLib Datasets Archive: \url{http://lib.stat.cmu.edu/datasets/bodyfat}.
+#' StatLib Datasets Archive: \url{https://lib.stat.cmu.edu/datasets/bodyfat}.
 #' @references
 #' Penrose, K., Nelson, A. and Fisher, A. (1985). Generalized Body Composition
 #' Prediction Equation for Men Using Simple Measurement Techniques.
 #' *Medicine and Science in Sports and Exercise*, 17(2), 189.
-#' \url{https://doi.org/10.1249/00005768-198504000-00037}.
+#' \doi{10.1249/00005768-198504000-00037}.
 #' @keywords datasets
 #' @seealso [`bodyfat`], [`bodyfat.raw`]
 #' @examples
@@ -278,7 +280,7 @@ NULL # mpae-package
 #' `total.sulfur.dioxide` , `density`, `pH`, `sulphates` and `alcohol`)
 #' and sensory (`quality`).
 #'
-#' For more details, consult \url{http://www.vinhoverde.pt/en/} or the reference
+#' For more details, consult \url{https://www.vinhoverde.pt/en/} or the reference
 #' Cortez et al. (2009).
 #'
 #' @name winequality
@@ -299,7 +301,7 @@ NULL # mpae-package
 #'   \item{quality}{median of at least 3 evaluations of wine quality carried out
 #'   by experts, who evaluated them between 0 (very bad) and 10 (very excellent)}
 #' }
-#' @source UCI Machine Learning Repository: \url{http://archive.ics.uci.edu/dataset/186/wine+quality}.
+#' @source UCI Machine Learning Repository: \url{https://archive.ics.uci.edu/dataset/186/wine+quality}.
 #' @references
 #' Cortez, P., Cerdeira, A., Almeida, F., Matos, T., & Reis, J. (2009).
 #' Modeling wine preferences by data mining from physicochemical properties.
@@ -326,7 +328,7 @@ NULL # mpae-package
 #' who evaluated them between 0 = very bad and 10 = very excellent, is not less
 #' than 6.
 #'
-#' For more details, consult \url{http://www.vinhoverde.pt/en/} or the reference
+#' For more details, consult \url{https://www.vinhoverde.pt/en/} or the reference
 #' Cortez et al. (2009).
 #'
 #' @name winetaste
@@ -347,7 +349,7 @@ NULL # mpae-package
 #'   \item{taste}{factor with levels `"good"` and `"bad"` indicating the quality
 #'   of the wine}
 #' }
-#' @source UCI Machine Learning Repository: \url{http://archive.ics.uci.edu/dataset/186/wine+quality}.
+#' @source UCI Machine Learning Repository: \url{https://archive.ics.uci.edu/dataset/186/wine+quality}.
 #' @references
 #' Cortez, P., Cerdeira, A., Almeida, F., Matos, T., & Reis, J. (2009).
 #' Modeling wine preferences by data mining from physicochemical properties.
@@ -456,9 +458,9 @@ NULL # mpae-package
   pkg.info <- drop( read.dcf( file = system.file("DESCRIPTION", package = "mpae"),
                               fields = c("Title", "Version", "Date") ))
   packageStartupMessage(
-    " mpae: Metodos predictivos de aprendizaje estadistico\n",
-    " (statistical learning predictive methods),\n",
+    " mpae: Metodos Predictivos de Aprendizaje Estadistico\n",
+    " (Statistical Learning Predictive Methods),\n",
     paste0(" version ", pkg.info["Version"], " (built on ", pkg.info["Date"], ").\n"),
     " Type `help(mpae)` for an overview of the package or\n",
-    " visit https://rubenfcasal.github.io/mpae.\n")
+    " visit https://rubenfcasal.github.io/mpae/.\n")
 }
