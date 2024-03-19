@@ -17,8 +17,8 @@
 #'
 #' Generates plots comparing predictions with observations.
 #' @inheritParams accuracy
-#' @param ... additional graphical parameters (e.g. to be passed to
-#' [RcmdrMisc::Barplot()]).
+#' @param ... additional graphical parameters or further arguments passed to
+#' other methods (e.g. to [RcmdrMisc::Barplot()]).
 #' @examples
 #' set.seed(1)
 #' nobs <- nrow(hbat)
@@ -42,6 +42,7 @@
 #' old.par <- par(mfrow = c(1, 2))
 #' pred.plot(pred, obs, type = c("perc", "cperc"))
 #' par(old.par)
+#' @seealso [accuracy()]
 #' @export
 pred.plot <- function(pred, obs, ...){
   UseMethod("pred.plot")
@@ -70,11 +71,11 @@ pred.plot.default <- function(pred, obs, xlab = "Predicted", ylab = "Observed",
   plot(pred, obs, xlab = xlab, ylab = ylab, ...)
   abline(a = 0, b = 1, lwd = 2)
   if (lowess)
-    lines(lowess(pred, obs), lty = 2, lwd = 2, col = 'blue')
+    lines(lowess(pred, obs), lwd = 2, col = 'blue')
   if (lm.fit) {
     res <- lm(obs ~ pred)
     # summary(res)
-    abline(res, lty = 2)
+    abline(res, lty = 2, lwd = 2, col = 'blue')
     return(invisible(res))
   }
 }

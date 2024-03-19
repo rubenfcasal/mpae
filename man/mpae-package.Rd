@@ -7,20 +7,21 @@
 \title{mpae: Métodos predictivos de aprendizaje estadístico
 (statistical learning predictive methods)}
 \description{
-Functions and datasets used in the book \href{https://rubenfcasal.github.io/aprendizaje_estadistico/}{\emph{Métodos predictivos de aprendizaje estadístico}}.
+Functions and datasets used in the book Fernández-Casal, Costa and Oviedo-de
+la Fuente (2024) \href{https://rubenfcasal.github.io/aprendizaje_estadistico/}{\emph{Métodos predictivos de aprendizaje estadístico}}.
 }
 \details{
 For more information visit \url{https://rubenfcasal.github.io/mpae/}.
 }
 \references{
-Fernández-Casal R., Costa J. y Oviedo-de la Fuente M. (2024). \emph{\href{https://rubenfcasal.github.io/aprendizaje_estadistico/}{Métodos predictivos de aprendizaje estadístico}}
+Fernández-Casal R., Costa J. and Oviedo-de la Fuente M. (2024). \emph{\href{https://rubenfcasal.github.io/aprendizaje_estadistico/}{Métodos predictivos de aprendizaje estadístico}}
 (\href{https://github.com/rubenfcasal/aprendizaje_estadistico/}{github}).
 
-Fernández-Casal R., Roca-Pardiñas J., Costa J. y Oviedo-de la Fuente M. (2022).
+Fernández-Casal R., Roca-Pardiñas J., Costa J. and Oviedo-de la Fuente M. (2022).
 \emph{\href{https://rubenfcasal.github.io/intror/}{Introducción al Análisis de Datos con R}}
 (\href{https://github.com/rubenfcasal/intror/}{github}).
 
-Fernández-Casal R., Cao R. y Costa J. (2023).
+Fernández-Casal R., Cao R. and Costa J. (2023).
 \emph{\href{https://rubenfcasal.github.io/simbook/}{Técnicas de Simulación y Remuestreo}},
 segunda edición, (\href{https://github.com/rubenfcasal/simbook/}{github}).
 }

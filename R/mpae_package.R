@@ -14,7 +14,8 @@
 #' mpae: Métodos predictivos de aprendizaje estadístico
 #' (statistical learning predictive methods)
 #'
-#' Functions and datasets used in the book [*Métodos predictivos de
+#' Functions and datasets used in the book Fernández-Casal, Costa and Oviedo-de
+#' la Fuente (2024) [*Métodos predictivos de
 #' aprendizaje estadístico*](https://rubenfcasal.github.io/aprendizaje_estadistico/).
 #'
 #' For more information visit <https://rubenfcasal.github.io/mpae/>.
@@ -28,14 +29,14 @@
 #' @importFrom RcmdrMisc Barplot
 # @importFrom grDevices dev.interactive devAskNewPage dev.flush dev.hold
 #' @references
-#' Fernández-Casal R., Costa J. y Oviedo-de la Fuente M. (2024). *[Métodos predictivos de aprendizaje estadístico](https://rubenfcasal.github.io/aprendizaje_estadistico/)*
+#' Fernández-Casal R., Costa J. and Oviedo-de la Fuente M. (2024). *[Métodos predictivos de aprendizaje estadístico](https://rubenfcasal.github.io/aprendizaje_estadistico/)*
 #' ([github](https://github.com/rubenfcasal/aprendizaje_estadistico/)).
 #'
-#' Fernández-Casal R., Roca-Pardiñas J., Costa J. y Oviedo-de la Fuente M. (2022).
+#' Fernández-Casal R., Roca-Pardiñas J., Costa J. and Oviedo-de la Fuente M. (2022).
 #' *[Introducción al Análisis de Datos con R](https://rubenfcasal.github.io/intror/)*
 #' ([github](https://github.com/rubenfcasal/intror/)).
 #'
-#' Fernández-Casal R., Cao R. y Costa J. (2023).
+#' Fernández-Casal R., Cao R. and Costa J. (2023).
 #' *[Técnicas de Simulación y Remuestreo](https://rubenfcasal.github.io/simbook/)*,
 #' segunda edición, ([github](https://github.com/rubenfcasal/simbook/)).
 NULL # mpae-package

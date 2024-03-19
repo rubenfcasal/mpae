@@ -29,6 +29,18 @@
 #' \item \code{mape} mean absolute percent error
 #' \item \code{r.squared} pseudo R-squared
 #' }
+#' @examples
+#' set.seed(1)
+#' nobs <- nrow(bodyfat)
+#' itrain <- sample(nobs, 0.8 * nobs)
+#' train <- bodyfat[itrain, ]
+#' test <- bodyfat[-itrain, ]
+#' fit <- lm(bodyfat ~ abdomen + wrist, data = train)
+#' pred <- predict(fit, newdata = test)
+#' obs <- test$bodyfat
+#' pred.plot(pred, obs)
+#' accuracy(pred, obs)
+#' @seealso [pred.plot()]
 #' @export
 accuracy <- function(pred, obs, na.rm = FALSE,
                      tol = sqrt(.Machine$double.eps)) {

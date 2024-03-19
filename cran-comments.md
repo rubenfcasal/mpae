@@ -1,3 +1,14 @@
+## Resubmission 2
+
+Updated reference in the Description field
+in DESCRIPTION file.
+
+There are no code lines commented out
+in examples.
+It seems to be a false detection due to 
+the results of `summary.lm()`.
+
+
 ## Resubmission 
 
 Added trailing slashes to URLs in README.md.

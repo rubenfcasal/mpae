@@ -30,3 +30,18 @@ Returns a named vector with the following components:
 \description{
 Computes accuracy measurements.
 }
+\examples{
+set.seed(1)
+nobs <- nrow(bodyfat)
+itrain <- sample(nobs, 0.8 * nobs)
+train <- bodyfat[itrain, ]
+test <- bodyfat[-itrain, ]
+fit <- lm(bodyfat ~ abdomen + wrist, data = train)
+pred <- predict(fit, newdata = test)
+obs <- test$bodyfat
+pred.plot(pred, obs)
+accuracy(pred, obs)
+}
+\seealso{
+\code{\link[=pred.plot]{pred.plot()}}
+}

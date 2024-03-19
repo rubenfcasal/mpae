@@ -34,8 +34,8 @@ pred.plot(pred, obs, ...)
 
 \item{obs}{a numeric vector with the observed values.}
 
-\item{...}{additional graphical parameters (e.g. to be passed to
-\code{\link[RcmdrMisc:Barplot]{RcmdrMisc::Barplot()}}).}
+\item{...}{additional graphical parameters or further arguments passed to
+other methods (e.g. to \code{\link[RcmdrMisc:Barplot]{RcmdrMisc::Barplot()}}).}
 
 \item{xlab}{a title for the x axis.}
 
@@ -97,4 +97,7 @@ pred.plot(pred, obs, type = "frec", style = "parallel")
 old.par <- par(mfrow = c(1, 2))
 pred.plot(pred, obs, type = c("perc", "cperc"))
 par(old.par)
+}
+\seealso{
+\code{\link[=accuracy]{accuracy()}}
 }
