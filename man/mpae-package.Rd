@@ -25,6 +25,3 @@ Fernández-Casal R., Cao R. and Costa J. (2023).
 \emph{\href{https://rubenfcasal.github.io/simbook/}{Técnicas de Simulación y Remuestreo}},
 segunda edición, (\href{https://github.com/rubenfcasal/simbook/}{github}).
 }
-\keyword{Monte-Carlo}
-\keyword{bootstrap}
-\keyword{simulation}

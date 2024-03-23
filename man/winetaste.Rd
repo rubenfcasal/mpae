@@ -36,7 +36,7 @@ containing physicochemical information (\code{fixed.acidity}, \code{volatile.aci
 and sensory (\code{taste}), which indicates the quality of the wine (it is
 considered good if the median of the wine quality evaluations, made by experts,
 who evaluated them between 0 = very bad and 10 = very excellent, is not less
-than 6.
+than 6).
 }
 \details{
 For more details, consult \url{https://www.vinhoverde.pt/en/} or the reference

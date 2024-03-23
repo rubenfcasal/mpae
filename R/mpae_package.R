@@ -19,7 +19,7 @@
 #' aprendizaje estadístico*](https://rubenfcasal.github.io/aprendizaje_estadistico/).
 #'
 #' For more information visit <https://rubenfcasal.github.io/mpae/>.
-#' @keywords simulation bootstrap Monte-Carlo
+# @keywords simulation bootstrap Monte-Carlo
 #' @name mpae-package
 #' @aliases mpae
 #' @docType package
@@ -327,7 +327,7 @@ NULL # mpae-package
 #' and sensory (`taste`), which indicates the quality of the wine (it is
 #' considered good if the median of the wine quality evaluations, made by experts,
 #' who evaluated them between 0 = very bad and 10 = very excellent, is not less
-#' than 6.
+#' than 6).
 #'
 #' For more details, consult \url{https://www.vinhoverde.pt/en/} or the reference
 #' Cortez et al. (2009).

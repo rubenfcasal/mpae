@@ -15,21 +15,21 @@ For more information visit <https://rubenfcasal.github.io/mpae/>.
 
 ## Installation
 
-`mpae` is not yet available from CRAN, but you can install the development
-version from github with:
+Install the released version from [CRAN](https://cran.r-project.org/package=mpae):
+
+``` r
+install.packages("mpae")
+# Also install packages in "Suggest" (used in book examples):
+# install.packages("mpae", dependencies = TRUE) 
+```
+
+Or install the development version from GitHub with:
 
 ``` r
 # install.packages("remotes")
 # remotes::install_github("rubenfcasal/mpae")
 remotes::install_github("rubenfcasal/mpae", INSTALL_opts = "--with-keep.source")
 ```
-
-Alternatively, Windows users (with R >= 4.3.0) may install the corresponding *mpae_X.Y.Z.zip* file in the [releases section](https://github.com/rubenfcasal/mpae/releases/latest) of the github repository, e.g.:
-
-``` r
-install.packages('https://github.com/rubenfcasal/mpae/releases/download/v0.1/mpae_0.1.0.zip', 
-                 repos = NULL)
-``` 
 
 ## References
 

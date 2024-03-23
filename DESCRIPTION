@@ -19,11 +19,11 @@ Imports:
 Suggests:
     car, gbm, leaps, lmtest, glmnet, mgcv, np, NeuralNetTools, pdp, vivid, 
     plot3D, AppliedPredictiveModeling, ISLR
-Description: Functions and datasets used in the book: Fernandez-Casal, R., 
-    Costa, J. and Oviedo-de la Fuente, M. (2024) "Metodos predictivos de 
+Description: Functions and datasets used in the book: Fernandez-Casal, R.,
+    Costa, J. and Oviedo-de la Fuente, M. (2024) "Metodos predictivos de
     aprendizaje estadistico" <https://rubenfcasal.github.io/aprendizaje_estadistico/>.
 License: GPL (>= 2)
-URL: https://github.com/rubenfcasal/mpae
+URL: https://rubenfcasal.github.io/mpae, https://github.com/rubenfcasal/mpae
 BugReports: https://github.com/rubenfcasal/mpae/issues
 Encoding: UTF-8
 LazyData: true
